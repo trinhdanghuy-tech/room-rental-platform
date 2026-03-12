@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/room_rental
+    username: root
+    password: tdhuy0909
+  jpa:
+    hibernate:
+      ddl-auto: update # Chạy local tạm thời, khi nào lên production thì đổi thành validate và dùng Flyway
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+server:
+  port: 8080

@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: room_rental_db
+    environment:
+      MYSQL_DATABASE: room_rental
+      MYSQL_ROOT_PASSWORD: tdhuy0909
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - app-network
+
+  # (Sau này sẽ cấu hình thêm redis hoặc backend container ở đây)
+
+volumes:
+  mysql_data:
+
+networks:
+  app-network:
+    driver: bridge
