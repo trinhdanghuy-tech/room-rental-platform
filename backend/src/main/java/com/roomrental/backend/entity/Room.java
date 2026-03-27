@@ -44,6 +44,7 @@ public class Room {
     private String ward;
     private Float area;
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     private RoomStatus status = RoomStatus.AVAILABLE;
 

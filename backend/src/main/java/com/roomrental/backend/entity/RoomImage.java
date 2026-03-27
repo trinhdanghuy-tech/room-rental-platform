@@ -23,6 +23,7 @@ public class RoomImage {
     @Column(nullable = false)
     private String url;
 
+    @Builder.Default
     @Column(name = "is_primary")
     private Boolean isPrimary = false;
 

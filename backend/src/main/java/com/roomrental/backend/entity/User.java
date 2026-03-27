@@ -39,6 +39,7 @@ public class User {
     @Column(name = "avatar_url")
     private String avatarUrl;
 
+    @Builder.Default
     @Column(nullable = false)
     private String status = "ACTIVE";
 

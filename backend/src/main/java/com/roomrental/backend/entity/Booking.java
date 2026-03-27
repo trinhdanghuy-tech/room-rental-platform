@@ -36,6 +36,7 @@ public class Booking {
     @Column(name = "total_price", precision = 12, scale = 2)
     private BigDecimal totalPrice;
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     private BookingStatus status = BookingStatus.PENDING;
 
